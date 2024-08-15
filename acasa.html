@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="acasa.css">
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+        <script src="firebase.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <header>
+                <div class="navbar-image">
+                    <span class="image">
+                        <img src="logo.png" alt="">
+                        <span class="link-text">SIMPLU CODE IT</span>
+                    </span>
+                </div>
+            </header>
+            <div class="navbar-list">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="acasa.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-home"></i></div>
+                            <span class="link-text">Acasa</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="lectii.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-book"></i></div>
+                            <span class="link-text">Lectii</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="realizari.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-trophy"></i></div>
+                            <span class="link-text">Realizari</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="proiecte.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-pencil"></i></div>
+                            <span class="link-text">Proiecte</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="istoric.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-calendar"></i></div>
+                            <span class="link-text">Istoric</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="setari.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-gear"></i></div>
+                            <span class="link-text">Setari</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-sign-out"></i></div>
+                            <span class="link-text">Deconectare</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div id="cards">
+                <div id="proiect-card" class="card">
+                    <div>
+                        <a id="proiect-link">
+                            <h1 id="welcome-text">Bine ai revenit, <span id="username"></span>!</h1>
+                            <p id="project-course"></p>
+                            <p id="project-title"></p>
+                            <p id="project-details"></p>
+                        </a>
+                    </div>
+                </div>
+                <div id="curs-card" class="card">
+                    <a id="curs-link">
+                        <h1>Ultimul curs activ:</h1>
+                        <p id="last-course"></p>
+                        <p id="last-lesson"><span id="lesson-name"></span> | <span id="lesson-date"></span></p>
+                        <div class="progress-container">
+                            <label for="curs-progress-bar">Progresul cursului:</label>
+                            <progress id="curs-progress-bar" max="100"></progress>
+                            <b>
+                                <span id="curs-progress-percent">0%</span>
+                                <span id="curs-progress">(0 / 0)</span>
+                            </b>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="realizari.html">
+                        <h2>Realizarea cea mai avansata:</h2>
+                        <p id="best-achievement"></p>
+                        <div class="progress-container">
+                            <label for="best-progress-bar">Progresul realizarii:</label>
+                            <progress id="best-progress-bar" max="100"></progress>
+                            <b>
+                                <span id="best-progress-percent">0%</span>
+                                <span id="best-progress">(0 / 0)</span>
+                            </b>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="realizari.html">
+                        <h2>La ce ai mai avea de lucru:</h2>
+                        <p id="worst-achievement"></p>
+                        <div class="progress-container">
+                            <label for="worst-progress-bar">Progresul realizarii:</label>
+                            <progress id="worst-progress-bar" max="100"></progress>
+                            <b>
+                                <span id="worst-progress-percent">0%</span>
+                                <span id="worst-progress">(0 / 0)</span>
+                            </b>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            Copyright © Simplu Cod IT 2024. All rights reserved.
+        </footer>
+        <script src="verifica.js"></script>
+        <script src="acasa.js"></script>
+    </body>
+</html>

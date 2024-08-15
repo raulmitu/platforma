@@ -1,0 +1,101 @@
+.nav-item:nth-child(3){
+    background-color: var(--orange);
+}
+
+.nav-item:nth-child(3) .nav-link{
+    color: black;
+}
+
+#cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px
+}
+
+.achievement-card {
+    background-color: rgb(230,230,230);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0);
+    margin-top: 15px;
+}
+
+.achievement-name {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.achievement-description {
+    font-size: 14px;
+    margin: 0 0 20px;
+}
+
+.progress-bar {
+    position: relative;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    margin: 40px 20px;
+}
+
+.progress{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    translate: 0% -50%;
+    height: inherit;
+    border-radius: inherit;
+    background: black;
+}
+
+.milestone {
+    position: absolute;
+    color: white;
+    -webkit-text-stroke: black .5px;
+    background: black;
+    top: 50%;
+    translate: -50% -50%;
+    aspect-ratio: 1;
+    width: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+    transition: all .15s ease;
+    font-weight: bold;
+    user-select: none;
+    animation: shine 1s linear infinite;
+}
+
+.bronze{
+    background: linear-gradient(to right, var(--orange), var(--darkorange), var(--darkorange), var(--orange));
+    background-size: 200%;
+}
+
+.silver {
+    background: linear-gradient(to right, var(--blue), var(--darkblue), var(--darkblue), var(--blue));
+    background-size: 200%;
+}
+
+.gold {
+    background: linear-gradient(to right, 
+    var(--blue), var(--darkblue), var(--darkorange), var(--orange), var(--darkorange), var(--darkblue), var(--blue)
+    );
+    background-size: 200%;
+}
+
+.student{
+    width: 70px;
+    line-height: 70px;
+}
+
+@keyframes shine{
+    0%{
+        background-position: 0% center;
+    }
+    100%{
+        background-position: 200% center;
+    }
+}

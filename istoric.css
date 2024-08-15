@@ -1,0 +1,112 @@
+.nav-item:nth-child(5){
+    background-color: var(--orange);
+}
+
+.nav-item:nth-child(5) .nav-link{
+    color: black;
+}
+
+#tables{
+    display: grid;
+    gap: 20px;
+    width: 100%;
+}
+
+.table{
+    padding: 10px;
+    box-shadow: 0 0 10px;
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    table-layout: fixed;
+}
+
+thead {
+    background-color: #333;
+    color: #fff;
+}
+
+th, td {
+    height: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 0.7em;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+th {
+    background-color: var(--blue);
+    color: white;
+    text-transform: uppercase;
+}
+
+td {
+    color: #333;
+    font-weight: bold;
+    font-size: 0.6em;
+}
+
+details {
+    padding: 10px;
+    font-size: 0.85em;
+}
+
+details div{
+    font-size: 1.5em;
+    padding-top: 10px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.9em;
+    line-height: 2rem;
+    border-radius: 10px;
+    user-select: none;
+    color: white;
+    padding: 10px;
+    background: var(--blue);
+    transition: all .15s ease;
+}
+
+details[open] summary{
+    text-decoration: underline;
+    color: var(--orange);
+    background: var(--darkblue);
+}
+
+details[open] summary:hover{
+    text-decoration: underline;
+    color: white;
+    background: var(--orange);
+}
+
+details:not([open]) summary:hover{
+    text-decoration: underline;
+    color: var(--orange);
+    background: var(--darkblue);
+}
+
+@media screen and (max-width: 600px) {
+    th, td {
+        font-size: 0.45em;
+        padding: 6px;
+    }
+    h2 {
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="login.css">
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+        <script src="firebase.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <form id="loginForm">
+            <section>
+                <img class="logo" src="logo.png" alt="">
+                <br><br>
+                <label class="title">Intra in cont</label>
+                <br>
+                <div class="form-group">
+                    <input id="utilizator" type="text" name="utilizator" placeholder="" required>
+                    <label class="form-label" for="utilizator">
+                        <i class="fa fa-user"></i> Nume Utilizator
+                    </label>
+                </div>
+                <div class="form-group">
+                    <input id="parola" type="password" name="parola" placeholder="" minlength="8" maxlength="20" required>
+                    <label class="form-label" for="parola">
+                        <i class="fa fa-key"></i> Parola
+                    </label>
+                </div>
+                <p id="feedback" class="feedback"></p>
+                <div class="form-group">
+                    <label class="form-label" for="submit">
+                        <i class="fa fa-paper-plane"></i>
+                    </label>
+                    <input id="submit" class="submit-login" type="submit" value="Conectare">
+                </div>
+                <a class="recover" href="resetare.html">Ai uitat parola?</a>
+            </section>
+        </form>
+        <script src="login.js"></script>
+    </body>
+</html>

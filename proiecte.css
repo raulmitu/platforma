@@ -1,0 +1,96 @@
+.nav-item:nth-child(4){
+    background-color: var(--orange);
+}
+
+.nav-item:nth-child(4) .nav-link{
+    color: black;
+}
+
+body{
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#projects{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#display-project{
+    display: flex;
+    justify-content: center;
+}
+
+.project{
+    padding: 10px;
+    display: grid;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px;
+    transition: all .15s ease;
+}
+
+.project a{
+    color: black;
+    text-decoration: none;
+    user-select: none;
+    transition: all .15s ease;
+}
+
+.project img{
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    max-width: 100%;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.project:hover{
+    border: solid;
+    background: var(--orange);
+    scale: .975;
+}
+
+.project:hover a{
+    color: white;
+}
+
+.prezentare{
+    border: solid;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px;
+    margin: 0 10%;
+}
+
+.prezentare h1{
+    text-align: center;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.prezentare ul{
+    padding-left: 30px;
+}
+
+@media screen and (min-width: 600px){
+    .project{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .project{
+        width: 33%;
+    }
+}
+
+video{
+    aspect-ratio: 16 / 9;
+    width: 400px;
+    margin: 10px;
+}
+
+main{
+    height: 100vh;
+}

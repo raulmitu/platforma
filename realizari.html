@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="realizari.css">
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+        <script src="firebase.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <header>
+                <div class="navbar-image">
+                    <span class="image">
+                        <img src="logo.png" alt="">
+                        <span class="link-text">SIMPLU CODE IT</span>
+                    </span>
+                </div>
+            </header>
+            <div class="navbar-list">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="acasa.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-home"></i></div>
+                            <span class="link-text">Acasa</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="lectii.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-book"></i></div>
+                            <span class="link-text">Lectii</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="realizari.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-trophy"></i></div>
+                            <span class="link-text">Realizari</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="proiecte.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-pencil"></i></div>
+                            <span class="link-text">Proiecte</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="istoric.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-calendar"></i></div>
+                            <span class="link-text">Istoric</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="setari.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-gear"></i></div>
+                            <span class="link-text">Setari</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-sign-out"></i></div>
+                            <span class="link-text">Deconectare</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <h2>Realizari complete (<span id="progres">0</span> / <span id="maxim">0</span>)</h2>
+            <div id="cards">
+                <div class="achievement-card">
+                    <h3 class="achievement-name">Achievement Name</h3>
+                    <p class="achievement-description">This is the description of the achievement.</p>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                        <div class="milestone bronze">33%</div>
+                        <div class="milestone silver">66%</div>
+                        <div class="milestone gold">100%</div>
+                        <div class="milestone">0%</div>
+                    </div>
+                    <h4>Progres: 0% (0 / 0)</h4>
+                </div>
+            </div>
+        </main>
+        <footer>
+            Copyright © Simplu Cod IT 2024. All rights reserved.
+        </footer>
+        <script src="verifica.js"></script>
+        <script src="realizari.js"></script>
+    </body>
+</html>

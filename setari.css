@@ -1,0 +1,38 @@
+.nav-item:nth-child(6){
+    background-color: var(--orange);
+}
+
+.nav-item:nth-child(6) .nav-link{
+    color: black;
+}
+
+#email-vechi{
+    pointer-events: none;
+    user-select: none;
+}
+
+section{
+    box-shadow: 0 0 10px;
+    border-radius: 10px;
+    max-height: 400px;
+    margin: 20px 0px;
+}
+
+@media screen and (max-width: 600px){
+    main h1{
+        text-align: center;
+    }
+    #cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 601px){
+    #cards{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+}

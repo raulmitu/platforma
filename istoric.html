@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="istoric.css">
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+        <script src="firebase.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <header>
+                <div class="navbar-image">
+                    <span class="image">
+                        <img src="logo.png" alt="">
+                        <span class="link-text">SIMPLU CODE IT</span>
+                    </span>
+                </div>
+            </header>
+            <div class="navbar-list">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="acasa.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-home"></i></div>
+                            <span class="link-text">Acasa</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="lectii.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-book"></i></div>
+                            <span class="link-text">Lectii</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="realizari.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-trophy"></i></div>
+                            <span class="link-text">Realizari</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="proiecte.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-pencil"></i></div>
+                            <span class="link-text">Proiecte</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="istoric.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-calendar"></i></div>
+                            <span class="link-text">Istoric</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="setari.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-gear"></i></div>
+                            <span class="link-text">Setari</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-sign-out"></i></div>
+                            <span class="link-text">Deconectare</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div id="tables">
+                <div class="table">
+                    <h2>August 2024</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Ora</th>
+                                <th>Curs</th>
+                                <th>Modul</th>
+                                <th>Lectie</th>
+                                <th>Sedinte</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Joi, 01</td>
+                                <td>18:00</td>
+                                <td>Scratch</td>
+                                <td>Incepator</td>
+                                <td>Lectia 0</td>
+                                <td>3</td>
+                                <td>Prezent</td>
+                            </tr>
+                            <tr class="details-row">
+                                <td colspan="6">
+                                    <details>
+                                        <summary>View Details</summary>
+                                        <div>
+                                            Additional Notes: Student missed this lesson due to illness.
+                                            Make-up Lesson: Scheduled for 2024-08-10.
+                                        </div>
+                                    </details>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <footer>
+            Copyright © Simplu Cod IT 2024. All rights reserved.
+        </footer>
+        <script src="verifica.js"></script>
+        <script src="istoric.js"></script>
+    </body>
+</html>

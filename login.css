@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    font-family: 'Poppins';
+    --blue: rgb(0, 125, 255);
+    --darkblue: #003266;
+    --orange: rgb(255, 125, 0)
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    flex-flow: column;
+}
+
+.recover{
+    color: var(--orange);
+    border: black solid;
+    border-radius: 5px;
+    padding: 4px 60px;
+    transition: 0.15s all ease;
+}
+
+.recover:hover{
+    color: black;
+    background: var(--orange);
+}
+
+.logo{
+    aspect-ratio: 1;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.title{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.form-group{
+    position: relative;
+    margin: 12px 6px;
+}
+
+.form-group input{
+    padding: 8px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: solid 2px;
+    background: transparent;
+    transition: 0.15s all ease;
+}
+
+.feedback{
+    color: var(--orange);
+    font-weight: bold;
+    width: 250px;
+}
+
+.form-label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    translate: 0% -50%;
+    font-size: clamp(9px, 100%, 18px);
+    padding: 0 10px;
+    pointer-events: none;
+    transition: 0.15s all ease;
+}
+
+.login{
+    color: var(--blue);
+}
+
+#submit{
+    background: var(--blue);
+    color: white;
+    cursor: pointer;
+    border: solid black;
+}
+
+.hide{
+    display: none;
+}
+
+#submit:hover{
+    background: var(--darkblue);
+    color: var(--orange);
+    border: solid var(--orange);
+}
+
+.form-group:hover .fa{
+    color: var(--orange);
+}
+
+#submit:active{
+    background: var(--orange);
+    color: black;
+}
+
+.form-group input:focus + .form-label,
+.form-group input:not(:placeholder-shown) + .form-label
+{
+    transform: translate(5px, -22px);
+    background: white;
+    color: var(--orange);
+    font-size: 14px;
+}
+
+.form-group .submit-login{
+    padding: 8px 80px;
+}
+
+.form-group .submit-reset{
+    padding: 8px 60px;
+}
+
+.form-group .submit-password{
+    padding: 8px 50px;
+}

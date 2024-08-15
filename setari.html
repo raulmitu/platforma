@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="setari.css">
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+        <script src="firebase.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script src="email.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <header>
+                <div class="navbar-image">
+                    <span class="image">
+                        <img src="logo.png" alt="">
+                        <span class="link-text">SIMPLU CODE IT</span>
+                    </span>
+                </div>
+            </header>
+            <div class="navbar-list">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="acasa.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-home"></i></div>
+                            <span class="link-text">Acasa</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="lectii.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-book"></i></div>
+                            <span class="link-text">Lectii</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="realizari.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-trophy"></i></div>
+                            <span class="link-text">Realizari</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="proiecte.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-pencil"></i></div>
+                            <span class="link-text">Proiecte</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="istoric.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-calendar"></i></div>
+                            <span class="link-text">Istoric</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="setari.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-gear"></i></div>
+                            <span class="link-text">Setari</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">
+                            <div class="icon"><i class="fa fa-sign-out"></i></div>
+                            <span class="link-text">Deconectare</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <h1>Setari:</h1>
+            <div id="cards">
+                <form id="passwordForm">
+                    <section>
+                        <label class="title">Reseteaza parola</label>
+                        <br>
+                        <div class="form-group">
+                            <input id="parola-veche" type="password" name="parola-veche" placeholder="" minlength="8" maxlength="20" required>
+                            <label class="form-label" for="parola-veche">
+                                <i class="fa fa-lock"></i> Parola Veche
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input id="parola-noua" type="password" name="parola-noua" placeholder="" minlength="8" maxlength="20" required>
+                            <label class="form-label" for="parola-noua">
+                                <i class="fa fa-unlock"></i> Parola Noua
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input id="parola-confirma" type="password" name="parola-confirma" placeholder="" minlength="8" maxlength="20" required>
+                            <label class="form-label" for="parola-confirma">
+                                <i class="fa fa-check-circle"></i> Confirma Parola Noua
+                            </label>
+                        </div>
+                        <p id="passwordFeedback" class="feedback"></p>
+                        <div class="form-group">
+                            <label class="form-label" for="submit">
+                                <i class="fa fa-paper-plane"></i>
+                            </label>
+                            <input id="submit" class="submit-password" type="submit" value="Reseteaza Parola">
+                        </div>
+                    </section>
+                </form>
+                <form id="emailForm">
+                    <section>
+                        <label class="title">Reseteaza adresa de email</label>
+                        <br>
+                        <div class="form-group">
+                            <input id="email-vechi" type="email" name="email-vechi">
+                            <label class="form-label" for="email-vechi">
+                                <i class="fa fa-envelope"></i> Email Actual
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input id="email-nou" type="email" name="email-nou" placeholder="" minlength="8" maxlength="20" required>
+                            <label class="form-label" for="email-nou">
+                                <i class="fa fa-envelope-open"></i> Email Nou
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input id="parola-actuala" type="password" name="parola-actuala" placeholder="" minlength="8" maxlength="20" required>
+                            <label class="form-label" for="parola-actuala">
+                                <i class="fa fa-key"></i> Parola Actuala
+                            </label>
+                        </div>
+                        <p id="emailFeedback" class="feedback"></p>
+                        <div class="form-group">
+                            <label class="form-label" for="submit">
+                                <i class="fa fa-paper-plane"></i>
+                            </label>
+                            <input id="submit" class="submit-password" type="submit" value="Reseteaza Email">
+                        </div>
+                    </section>
+                </form>
+                <form id="confirmForm" class="hide">
+                    <section>
+                        <img class="logo" src="logo.png" alt="">
+                        <br><br>
+                        <label class="title">Confirmare modificare</label>
+                        <br>
+                        <div class="form-group">
+                            <input id="cod" type="number" name="cod" placeholder="" required>
+                            <label class="form-label" for="cod">
+                                <i class="fa fa-th"></i> Cod Email
+                            </label>
+                        </div>
+                        <p id="confirmFeedback" class="feedback"></p>
+                        <div class="form-group">
+                            <label class="form-label" for="submit">
+                                <i class="fa fa-paper-plane"></i>
+                            </label>
+                            <input id="submit" class="submit-reset" type="submit" value="Confirma Modificarea">
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </main>
+        <footer>
+            Copyright © Simplu Cod IT 2024. All rights reserved.
+        </footer>
+        <script src="verifica.js"></script>
+        <script src="setari.js"></script>
+    </body>
+</html>

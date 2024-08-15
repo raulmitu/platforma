@@ -1,0 +1,134 @@
+.nav-item:nth-child(1){
+    background-color: var(--orange);
+}
+
+.nav-item:nth-child(1) .nav-link{
+    color: black;
+}
+
+#cards{
+    display: grid;
+}
+
+.card{
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px;
+    transition: all .15s ease;
+}
+
+.card:hover, .card:active{
+    background: linear-gradient(to right, var(--blue), var(--orange), var(--blue));
+    border: solid;
+    background-size: 200%;
+    box-shadow: 0 0 40px;
+    animation: shine 1s linear infinite;
+}
+
+#proiect-card{
+    background-position: center;
+    padding: 0;
+}
+
+#proiect-card div{
+    padding: 5px;
+    border-radius: inherit;
+    backdrop-filter: blur(5px);
+}
+
+@keyframes shine{
+    0%{
+        background-position: 0% center;
+    }
+    100%{
+        background-position: 200% center;
+    }
+}
+
+.card:hover{
+    scale: .975;
+}
+
+.card:active{
+    scale: .95;
+}
+
+.card:active a{
+    color: var();
+}
+
+.card a{
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+#last-achievement{
+    font-weight: bold;
+}
+
+#best-achievement, #worst-achievement, #last-course, #project-course{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#username{
+    color: transparent;
+    font-weight: bold;
+    background: linear-gradient(to right, var(--orange), var(--blue));
+    background-clip: text;
+    -webkit-text-stroke: black 2px;
+}
+
+.card h1 {
+    font-size: 24px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+progress {
+    overflow: hidden;
+    border-radius: 50px;
+    border: 2px solid;
+    width: 100%;
+    height: 20px;
+}
+
+progress::-webkit-progress-bar {
+    background: transparent;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--orange);
+}
+
+#progress-percent, #progress{
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#last-course, #last-lesson, #project-title{
+    font-weight: bold;
+}
+
+#project-details, .progress-container{
+    padding: 0 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    background: rgb(0,0,0,.5);
+}
+
+#project-details{
+    margin: -5px;
+    margin-top: 10px;
+}
+
+.progress-container {
+    margin: -10px;
+    margin-top: 20px;
+}
